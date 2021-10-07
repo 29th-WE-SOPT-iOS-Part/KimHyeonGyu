@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Checkin View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CheckinViewController" id="Y6W-OH-hqX" customClass="CheckinViewController" customModule="SOPT_29th_iOS_SeminarAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmy-1j-Zyk">
+                                <rect key="frame" x="115" y="312" width="184" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OOO 님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-Uj-u2f">
+                                <rect key="frame" x="165.5" y="404" width="83" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnb-1t-Aut">
+                                <rect key="frame" x="149" y="444" width="116" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlu-Y7-fyD">
+                                <rect key="frame" x="20" y="524" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mml-cn-seW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="확인">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="dismissToPrevious:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mEk-9M-n29"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tlu-Y7-fyD" firstAttribute="top" secondItem="Gnb-1t-Aut" secondAttribute="bottom" constant="50" id="33A-q2-98f"/>
+                            <constraint firstItem="a5b-Uj-u2f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7lO-mL-r3E"/>
+                            <constraint firstItem="a5b-Uj-u2f" firstAttribute="top" secondItem="Qmy-1j-Zyk" secondAttribute="bottom" constant="20" id="8qQ-GP-5g0"/>
+                            <constraint firstItem="tlu-Y7-fyD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="BGO-Gs-pbd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tlu-Y7-fyD" secondAttribute="trailing" constant="20" id="Fg1-CN-1YU"/>
+                            <constraint firstItem="Gnb-1t-Aut" firstAttribute="top" secondItem="a5b-Uj-u2f" secondAttribute="bottom" constant="10" id="LP4-sU-e0P"/>
+                            <constraint firstItem="Qmy-1j-Zyk" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Wnu-sZ-XQ3"/>
+                            <constraint firstItem="tlu-Y7-fyD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="aqr-KY-i03"/>
+                            <constraint firstItem="Qmy-1j-Zyk" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-100" id="beb-2c-9Ny"/>
+                            <constraint firstItem="Gnb-1t-Aut" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vzC-r0-TaZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userNameLabel" destination="a5b-Uj-u2f" id="k0D-fQ-H42"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
