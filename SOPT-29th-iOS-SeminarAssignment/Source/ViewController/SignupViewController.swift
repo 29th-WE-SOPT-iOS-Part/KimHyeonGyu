@@ -31,9 +31,9 @@ class SignupViewController: UIViewController {
     
     // MARK: - @IBOutlet Properties
     
-    @IBAction func presentToCheckinViewController(_ sender: Any) {
-        let storyboard = UIStoryboard(name: Const.Storyboard.Name.Checkin, bundle: nil)
-        guard let checkinVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Name.CheckinViewController) as? CheckinViewController else {
+    @IBAction func touchSignupButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Const.Storyboard.Name.checkin, bundle: nil)
+        guard let checkinVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Identifier.checkin) as? CheckinViewController else {
             return
         }
         

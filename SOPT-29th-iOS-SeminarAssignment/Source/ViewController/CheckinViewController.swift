@@ -26,8 +26,31 @@ class CheckinViewController: UIViewController {
     
     // MARK: - @IBOutlet Properties
     
-    @IBAction func dismissToPrevious(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func touchCheckinButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Const.Storyboard.Name.tabbar, bundle: nil)
+        guard let nextVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Identifier.tabbar) as? TabBarViewController else { return }
+        
+        nextVC.modalPresentationStyle = .overFullScreen
+        self.present(nextVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func touchLoginButton(_ sender: Any) {
+        // popToRootViewController 메서드 사용
+//        guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
+//        self.dismiss(animated: true) {
+//            presentingVC.popToRootViewController(animated: true)
+//        }
+        
+        // popToViewController 메서드 사용
+        guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
+        let viewControllerStack = presentingVC.viewControllers
+        self.dismiss(animated: true) {
+            for viewController in viewControllerStack {
+                if let rootVC = viewController as? LoginViewController {
+                    presentingVC.popToViewController(rootVC, animated: true)
+                }
+            }
+        }
     }
 }
 

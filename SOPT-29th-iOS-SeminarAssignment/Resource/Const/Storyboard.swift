@@ -10,9 +10,10 @@ import Foundation
 extension Const {
     struct Storyboard {
         struct Name {
-            static let Login = "Login"
-            static let Signup = "Signup"
-            static let Checkin = "Checkin"
+            static let login = "Login"
+            static let signup = "Signup"
+            static let checkin = "Checkin"
+            static let tabbar = "TabBar"
         }
     }
 }

@@ -16,51 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmy-1j-Zyk">
-                                <rect key="frame" x="115" y="312" width="184" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OOO 님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-Uj-u2f">
-                                <rect key="frame" x="165.5" y="404" width="83" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnb-1t-Aut">
-                                <rect key="frame" x="149" y="444" width="116" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OOO 님 환영합니다!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-Uj-u2f">
+                                <rect key="frame" x="149.5" y="355" width="115.5" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlu-Y7-fyD">
-                                <rect key="frame" x="20" y="524" width="374" height="50"/>
+                                <rect key="frame" x="22" y="468" width="370" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Mml-cn-seW"/>
+                                    <constraint firstAttribute="height" constant="42" id="Mml-cn-seW"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="확인">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="dismissToPrevious:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mEk-9M-n29"/>
+                                    <action selector="touchCheckinButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YXa-Hr-mJM"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KRc-tQ-5sk">
+                                <rect key="frame" x="128" y="292" width="157" height="40"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCy-N0-FeE">
+                                <rect key="frame" x="124.5" y="533" width="165" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기"/>
+                                <connections>
+                                    <action selector="touchLoginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6vC-kc-Hf6"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tlu-Y7-fyD" firstAttribute="top" secondItem="Gnb-1t-Aut" secondAttribute="bottom" constant="50" id="33A-q2-98f"/>
                             <constraint firstItem="a5b-Uj-u2f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7lO-mL-r3E"/>
-                            <constraint firstItem="a5b-Uj-u2f" firstAttribute="top" secondItem="Qmy-1j-Zyk" secondAttribute="bottom" constant="20" id="8qQ-GP-5g0"/>
-                            <constraint firstItem="tlu-Y7-fyD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="BGO-Gs-pbd"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tlu-Y7-fyD" secondAttribute="trailing" constant="20" id="Fg1-CN-1YU"/>
-                            <constraint firstItem="Gnb-1t-Aut" firstAttribute="top" secondItem="a5b-Uj-u2f" secondAttribute="bottom" constant="10" id="LP4-sU-e0P"/>
-                            <constraint firstItem="Qmy-1j-Zyk" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Wnu-sZ-XQ3"/>
-                            <constraint firstItem="tlu-Y7-fyD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="aqr-KY-i03"/>
-                            <constraint firstItem="Qmy-1j-Zyk" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-100" id="beb-2c-9Ny"/>
-                            <constraint firstItem="Gnb-1t-Aut" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vzC-r0-TaZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KRc-tQ-5sk" secondAttribute="trailing" constant="129" id="83Z-eJ-7sB"/>
+                            <constraint firstItem="PCy-N0-FeE" firstAttribute="top" secondItem="tlu-Y7-fyD" secondAttribute="bottom" constant="23" id="DyV-p8-Oha"/>
+                            <constraint firstItem="tlu-Y7-fyD" firstAttribute="top" secondItem="a5b-Uj-u2f" secondAttribute="bottom" constant="53" id="FKg-uD-5xs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tlu-Y7-fyD" secondAttribute="trailing" constant="22" id="Fg1-CN-1YU"/>
+                            <constraint firstItem="a5b-Uj-u2f" firstAttribute="top" secondItem="KRc-tQ-5sk" secondAttribute="bottom" constant="23" id="Fur-k5-Nb6"/>
+                            <constraint firstItem="KRc-tQ-5sk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="248" id="Nr1-fG-ZdA"/>
+                            <constraint firstItem="PCy-N0-FeE" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Q2K-kG-cQ4"/>
+                            <constraint firstItem="tlu-Y7-fyD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="22" id="aqr-KY-i03"/>
+                            <constraint firstItem="KRc-tQ-5sk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="128" id="uqP-3c-TUH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -73,6 +72,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="118" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

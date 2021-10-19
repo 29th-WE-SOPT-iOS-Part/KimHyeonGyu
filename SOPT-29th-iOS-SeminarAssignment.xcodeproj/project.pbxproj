@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F86E51FB271DE05000D57993 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86E51FA271DE05000D57993 /* TabBar.storyboard */; };
+		F86E51FD271DE06F00D57993 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E51FC271DE06F00D57993 /* TabBarViewController.swift */; };
+		F86E51FF271DE11400D57993 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E51FE271DE11400D57993 /* HomeViewController.swift */; };
+		F86E5201271DE11F00D57993 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E5200271DE11F00D57993 /* LibraryViewController.swift */; };
+		F86E5203271DE14900D57993 /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E5202271DE14900D57993 /* PlusViewController.swift */; };
+		F86E5205271DE16100D57993 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E5204271DE16100D57993 /* SubscriptionViewController.swift */; };
+		F86E5207271DE16E00D57993 /* ShortsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E5206271DE16E00D57993 /* ShortsViewController.swift */; };
 		F8D2BE70270848FF00ED5EEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D2BE6F270848FF00ED5EEA /* SceneDelegate.swift */; };
 		F8D2BE72270848FF00ED5EEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D2BE71270848FF00ED5EEA /* LoginViewController.swift */; };
 		F8D2BE75270848FF00ED5EEA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D2BE73270848FF00ED5EEA /* Login.storyboard */; };
@@ -23,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F86E51FA271DE05000D57993 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		F86E51FC271DE06F00D57993 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F86E51FE271DE11400D57993 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F86E5200271DE11F00D57993 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		F86E5202271DE14900D57993 /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
+		F86E5204271DE16100D57993 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
+		F86E5206271DE16E00D57993 /* ShortsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsViewController.swift; sourceTree = "<group>"; };
 		F8D2BE6A270848FF00ED5EEA /* SOPT-29th-iOS-SeminarAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-29th-iOS-SeminarAssignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D2BE6F270848FF00ED5EEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F8D2BE71270848FF00ED5EEA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +65,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F86E5208271DE17000D57993 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F86E51FC271DE06F00D57993 /* TabBarViewController.swift */,
+				F86E51FE271DE11400D57993 /* HomeViewController.swift */,
+				F86E5200271DE11F00D57993 /* LibraryViewController.swift */,
+				F86E5202271DE14900D57993 /* PlusViewController.swift */,
+				F86E5204271DE16100D57993 /* SubscriptionViewController.swift */,
+				F86E5206271DE16E00D57993 /* ShortsViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		F8D2BE61270848FF00ED5EEA = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +131,7 @@
 				F8D2BE73270848FF00ED5EEA /* Login.storyboard */,
 				F8E70BEE270F4D0100A7DAF2 /* Signup.storyboard */,
 				F8E70BF4270F4D7300A7DAF2 /* Checkin.storyboard */,
+				F86E51FA271DE05000D57993 /* TabBar.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -114,6 +142,7 @@
 				F8D2BE71270848FF00ED5EEA /* LoginViewController.swift */,
 				F8E70BF0270F4D0C00A7DAF2 /* SignupViewController.swift */,
 				F8E70BF2270F4D6B00A7DAF2 /* CheckinViewController.swift */,
+				F86E5208271DE17000D57993 /* TabBar */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -190,6 +219,7 @@
 				F8D2BE7A270848FF00ED5EEA /* LaunchScreen.storyboard in Resources */,
 				F8D2BE77270848FF00ED5EEA /* Assets.xcassets in Resources */,
 				F8E70BEF270F4D0100A7DAF2 /* Signup.storyboard in Resources */,
+				F86E51FB271DE05000D57993 /* TabBar.storyboard in Resources */,
 				F8D2BE75270848FF00ED5EEA /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,13 +232,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8E70BFE270F503A00A7DAF2 /* AppDelegate.swift in Sources */,
+				F86E5201271DE11F00D57993 /* LibraryViewController.swift in Sources */,
+				F86E5203271DE14900D57993 /* PlusViewController.swift in Sources */,
 				F8D2BE72270848FF00ED5EEA /* LoginViewController.swift in Sources */,
 				F8E70BF1270F4D0C00A7DAF2 /* SignupViewController.swift in Sources */,
 				F8E70BF3270F4D6B00A7DAF2 /* CheckinViewController.swift in Sources */,
+				F86E51FD271DE06F00D57993 /* TabBarViewController.swift in Sources */,
+				F86E51FF271DE11400D57993 /* HomeViewController.swift in Sources */,
 				F8D2BE70270848FF00ED5EEA /* SceneDelegate.swift in Sources */,
 				F8E70BFC270F4EB000A7DAF2 /* ViewController.swift in Sources */,
+				F86E5205271DE16100D57993 /* SubscriptionViewController.swift in Sources */,
 				F8E70BFA270F4E8B00A7DAF2 /* Storyboard.swift in Sources */,
 				F8E70BF8270F4E7E00A7DAF2 /* Const.swift in Sources */,
+				F86E5207271DE16E00D57993 /* ShortsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

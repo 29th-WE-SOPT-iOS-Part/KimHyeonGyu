@@ -9,10 +9,16 @@ import Foundation
 
 extension Const {
     struct ViewController {
-        struct Name {
-            static let LoginViewController = "LoginViewController"
-            static let SignupViewController = "SignupViewController"
-            static let CheckinViewController = "CheckinViewController"
+        struct Identifier {
+            static let login = "LoginViewController"
+            static let signup = "SignupViewController"
+            static let checkin = "CheckinViewController"
+            static let tabbar = "TabBarViewController"
+            static let home = "HomeViewController"
+            static let library = "LibraryViewController"
+            static let plus = "PlusViewController"
+            static let subscription = "SubscriptionViewController"
+            static let shotrs = "ShortsViewController"
         }
     }
 }
