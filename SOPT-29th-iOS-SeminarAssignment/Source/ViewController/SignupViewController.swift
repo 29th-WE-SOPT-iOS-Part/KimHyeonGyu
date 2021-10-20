@@ -29,6 +29,11 @@ class SignupViewController: UIViewController {
         initTextField()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initTextFieldEmpty()
+    }
+    
     // MARK: - @IBOutlet Properties
     
     @IBAction func touchSignupButton(_ sender: Any) {
@@ -38,7 +43,7 @@ class SignupViewController: UIViewController {
         }
         
         checkinVC.userName = nameTextField.text
-        checkinVC.modalPresentationStyle = .overFullScreen
+        checkinVC.modalPresentationStyle = .fullScreen
         present(checkinVC, animated: true, completion: nil)
     }
     @IBAction func touchPasswordTextFieldSecure(_ sender: Any) {
@@ -65,6 +70,11 @@ extension SignupViewController {
                                           contactTextField,
                                           passwordTextField])
         textFieldList.forEach { $0.delegate = self }
+    }
+    private func initTextFieldEmpty() {
+        textFieldList.forEach {
+            $0.text = ""
+        }
     }
 }
 
