@@ -21,11 +21,11 @@ class TabBarViewController: UITabBarController {
 
 extension TabBarViewController {
     private func initTabBar() {
-        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.home) as? HomeViewController else { return }
-        guard let shortsVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.shotrs) as? ShortsViewController else { return }
-        guard let plusVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.plus) as? PlusViewController else { return }
-        guard let subscriptionVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.subscription) as? SubscriptionViewController else { return }
-        guard let libraryVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.library) as? LibraryViewController else { return }
+        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.home),
+              let shortsVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.shotrs),
+              let plusVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.plus),
+              let subscriptionVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.subscription),
+              let libraryVC = self.storyboard?.instantiateViewController(withIdentifier: Const.ViewController.Identifier.library) else { return }
         
         homeVC.tabBarItem.title = "홈"
         homeVC.tabBarItem.image = UIImage(named: "homeIcon")
