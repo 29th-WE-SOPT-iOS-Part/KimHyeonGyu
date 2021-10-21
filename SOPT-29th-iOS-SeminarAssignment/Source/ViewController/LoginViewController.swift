@@ -29,24 +29,29 @@ class LoginViewController: UIViewController {
         initTextField()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initTextFieldEmpty()
+    }
+    
     // MARK: - @IBOutlet Properties
     
-    @IBAction func pushToSignupViewController(_ sender: Any) {
-        let storyboard = UIStoryboard(name: Const.Storyboard.Name.Signup, bundle: nil)
-        guard let signupVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Name.SignupViewController) as? SignupViewController else {
+    @IBAction func touchSignupButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Const.Storyboard.Name.signup, bundle: nil)
+        guard let signupVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Identifier.signup) as? SignupViewController else {
             return
         }
 
         navigationController?.pushViewController(signupVC, animated: true)
     }
-    @IBAction func presentToCheckinViewController(_ sender: Any) {
-        let storyboard = UIStoryboard(name: Const.Storyboard.Name.Checkin, bundle: nil)
-        guard let checkinVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Name.CheckinViewController) as? CheckinViewController else {
+    @IBAction func touchCheckinButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Const.Storyboard.Name.checkin, bundle: nil)
+        guard let checkinVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Identifier.checkin) as? CheckinViewController else {
             return
         }
         
         checkinVC.userName = nameTextField.text
-        checkinVC.modalPresentationStyle = .overFullScreen
+        checkinVC.modalPresentationStyle = .fullScreen
         present(checkinVC, animated: true, completion: nil)
     }
 }
@@ -63,6 +68,11 @@ extension LoginViewController {
                                           contactTextField,
                                           passwordTextField])
         textFieldList.forEach { $0.delegate = self }
+    }
+    private func initTextFieldEmpty() {
+        textFieldList.forEach {
+            $0.text = ""
+        }
     }
 }
 
