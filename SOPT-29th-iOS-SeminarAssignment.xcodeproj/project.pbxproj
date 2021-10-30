@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4385EDF39C913E434988157 /* Pods_SOPT_29th_iOS_SeminarAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B5CDF251480DB46DB232E5 /* Pods_SOPT_29th_iOS_SeminarAssignment.framework */; };
 		F86E51FB271DE05000D57993 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86E51FA271DE05000D57993 /* TabBar.storyboard */; };
 		F86E51FD271DE06F00D57993 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E51FC271DE06F00D57993 /* TabBarViewController.swift */; };
 		F86E51FF271DE11400D57993 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E51FE271DE11400D57993 /* HomeViewController.swift */; };
@@ -41,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61B5CDF251480DB46DB232E5 /* Pods_SOPT_29th_iOS_SeminarAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_29th_iOS_SeminarAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		682D272BCCB16C086AFE7213 /* Pods-SOPT-29th-iOS-SeminarAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-iOS-SeminarAssignment.release.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-iOS-SeminarAssignment/Pods-SOPT-29th-iOS-SeminarAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		B08B034AABFE2509BE3D294D /* Pods-SOPT-29th-iOS-SeminarAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-iOS-SeminarAssignment.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-iOS-SeminarAssignment/Pods-SOPT-29th-iOS-SeminarAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		F86E51FA271DE05000D57993 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		F86E51FC271DE06F00D57993 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F86E51FE271DE11400D57993 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -81,12 +85,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4385EDF39C913E434988157 /* Pods_SOPT_29th_iOS_SeminarAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D5C594877727949D998FA1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61B5CDF251480DB46DB232E5 /* Pods_SOPT_29th_iOS_SeminarAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47142CF7DB196EB384EC6189 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B08B034AABFE2509BE3D294D /* Pods-SOPT-29th-iOS-SeminarAssignment.debug.xcconfig */,
+				682D272BCCB16C086AFE7213 /* Pods-SOPT-29th-iOS-SeminarAssignment.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F86E5208271DE17000D57993 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +159,8 @@
 			children = (
 				F8D2BE6C270848FF00ED5EEA /* SOPT-29th-iOS-SeminarAssignment */,
 				F8D2BE6B270848FF00ED5EEA /* Products */,
+				47142CF7DB196EB384EC6189 /* Pods */,
+				1D5C594877727949D998FA1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8D2BE7E270848FF00ED5EEA /* Build configuration list for PBXNativeTarget "SOPT-29th-iOS-SeminarAssignment" */;
 			buildPhases = (
+				5640BB6DC72B31F318795FB5 /* [CP] Check Pods Manifest.lock */,
 				F8D2BE66270848FF00ED5EEA /* Sources */,
 				F8D2BE67270848FF00ED5EEA /* Frameworks */,
 				F8D2BE68270848FF00ED5EEA /* Resources */,
+				A038A290EB2955F5928AEFDA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +313,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5640BB6DC72B31F318795FB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SOPT-29th-iOS-SeminarAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A038A290EB2955F5928AEFDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOPT-29th-iOS-SeminarAssignment/Pods-SOPT-29th-iOS-SeminarAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOPT-29th-iOS-SeminarAssignment/Pods-SOPT-29th-iOS-SeminarAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOPT-29th-iOS-SeminarAssignment/Pods-SOPT-29th-iOS-SeminarAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8D2BE66270848FF00ED5EEA /* Sources */ = {
@@ -456,6 +525,7 @@
 		};
 		F8D2BE7F270848FF00ED5EEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B08B034AABFE2509BE3D294D /* Pods-SOPT-29th-iOS-SeminarAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -485,6 +555,7 @@
 		};
 		F8D2BE80270848FF00ED5EEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 682D272BCCB16C086AFE7213 /* Pods-SOPT-29th-iOS-SeminarAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
