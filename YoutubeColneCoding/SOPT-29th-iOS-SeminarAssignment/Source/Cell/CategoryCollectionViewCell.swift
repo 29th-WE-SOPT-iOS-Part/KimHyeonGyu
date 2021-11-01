@@ -34,7 +34,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         categoryLabel.text = text
         
         // ✅ systemLayoutSizeFitting 메서드 파라미터에 필요한 targetSize(선호하는 사이즈)를 만들어보자.
-        // ✅ width 의 경우, intrincsicContentSize 에 딱 맞도록 최소 크기를 위해서 layoutFittingCompressedSize(최소크기) 를 사용해서 설정.
+        // ✅ width 의 경우, intrinsicContentSize 에 딱 맞도록 최소 크기를 위해서 layoutFittingCompressedSize(최소크기) 를 사용해서 설정.
         // ✅ height 의 경우, 파라미터로 받아온 고정 값 설정.
         let targetSize = CGSize(width: UIView.layoutFittingCompressedSize.width, height: cellHeight)
         

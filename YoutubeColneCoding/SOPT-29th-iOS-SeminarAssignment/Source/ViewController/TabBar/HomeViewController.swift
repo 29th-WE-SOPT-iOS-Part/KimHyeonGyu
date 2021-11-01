@@ -38,6 +38,12 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     private func initNavigationBar() {
         self.navigationController?.navigationBar.isHidden = true
+        // ✅ 커스텀네비게이션바 클래스에서 View 의 Custom Class 를 설정했을 떄 사용하는 코드
+        guard let loadedNib = Bundle.main.loadNibNamed(String(describing: CustomNavigationBar.self), owner: self, options: nil) else { return }
+        guard let navigationBar = loadedNib.first as? CustomNavigationBar else { return }
+        
+        navigationBar.frame = CGRect(x: 0, y: 0, width: customNavigationBar.frame.width, height: customNavigationBar.frame.height)
+        customNavigationBar.addSubview(navigationBar)
     }
     
     private func assignDelegate() {
