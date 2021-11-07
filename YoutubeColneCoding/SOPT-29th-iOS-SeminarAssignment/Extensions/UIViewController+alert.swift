@@ -15,8 +15,9 @@ extension UIViewController {
                    okAction : ((UIAlertAction) -> Void)? = nil,
                    completion : (() -> ())? = nil)
     {
-        
+        // creates haptics to simulate physical impacts.
         let generator = UIImpactFeedbackGenerator(style: .medium)
+        // triggers impoact feedback.
         generator.impactOccurred()
         
         let alertViewController = UIAlertController(title: title, message: message,
