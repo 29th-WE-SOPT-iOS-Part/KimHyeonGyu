@@ -106,7 +106,7 @@
                     <connections>
                         <outlet property="categoryCollectionView" destination="5oQ-t9-WdF" id="gSh-pN-xh9"/>
                         <outlet property="channelCollectionView" destination="ceV-jc-46d" id="Ks8-5a-RyQ"/>
-                        <outlet property="customNavigationBar" destination="cm9-Ap-Uzb" id="vDI-1t-vf2"/>
+                        <outlet property="customNavigationBar" destination="cm9-Ap-Uzb" id="aRO-Qv-Ji2"/>
                         <outlet property="thumbnailTableView" destination="fos-su-oGk" id="Wg3-qN-O8g"/>
                     </connections>
                 </viewController>

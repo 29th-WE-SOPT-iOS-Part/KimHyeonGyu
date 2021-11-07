@@ -35,13 +35,13 @@ class CheckinViewController: UIViewController {
     }
     
     @IBAction func touchLoginButton(_ sender: Any) {
-        // popToRootViewController 메서드 사용
+        // ✅ popToRootViewController 메서드 사용
 //        guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
 //        self.dismiss(animated: true) {
 //            presentingVC.popToRootViewController(animated: true)
 //        }
         
-        // popToViewController 메서드 사용
+        // ✅ popToViewController 메서드 사용
         guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
         let viewControllerStack = presentingVC.viewControllers
         self.dismiss(animated: true) {
@@ -58,7 +58,7 @@ class CheckinViewController: UIViewController {
 
 extension CheckinViewController {
     private func setUI() {
-        userNameLabel.text = userName
+        userNameLabel.text =  UserDefaults.standard.string(forKey: Const.UserDefaults.Key.userName)
     }
 }
 
