@@ -48,5 +48,4 @@ class CustomNavigationBar: UIView {
         navigationController.modalTransitionStyle = .crossDissolve
         presentingViewController?.present(navigationController, animated: true, completion: nil)
     }
-    
 }

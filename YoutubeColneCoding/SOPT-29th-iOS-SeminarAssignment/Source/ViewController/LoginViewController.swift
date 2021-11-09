@@ -73,7 +73,6 @@ extension LoginViewController {
             return
         }
         
-        checkinVC.userName = nameTextField.text
         checkinVC.modalPresentationStyle = .fullScreen
         present(checkinVC, animated: true, completion: nil)
     }

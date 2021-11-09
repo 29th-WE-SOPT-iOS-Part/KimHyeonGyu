@@ -9,10 +9,6 @@ import UIKit
 
 class CheckinViewController: UIViewController {
     
-    // MARK: - Properties
-    
-    var userName: String?
-    
     // MARK: - @IBOutlet Properties
     
     @IBOutlet weak var userNameLabel: UILabel!

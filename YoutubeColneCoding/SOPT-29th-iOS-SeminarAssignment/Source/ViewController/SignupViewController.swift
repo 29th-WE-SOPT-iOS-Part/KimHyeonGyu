@@ -74,8 +74,7 @@ extension SignupViewController {
         guard let checkinVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Identifier.checkin) as? CheckinViewController else {
             return
         }
-        
-        checkinVC.userName = nameTextField.text
+
         checkinVC.modalPresentationStyle = .fullScreen
         present(checkinVC, animated: true, completion: nil)
     }
