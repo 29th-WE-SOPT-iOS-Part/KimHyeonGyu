@@ -85,12 +85,12 @@ extension LoginViewController {
         LoginService.shared.login(email: contactTextField.text ?? "",
                                   password: passwordTextField.text ?? "") { response in
             switch response {
-            case .success(let loginResponse):
-                if let data = loginResponse as? LoginResponseModel {
+            case .success(let loginResponse, let message):
+                if let data = loginResponse as? LoginResponseModel, let message = message as? String {
                     // ✅ UserDefaults 로 이름을 저장
                     UserDefaults.standard.set(data.name, forKey: Const.UserDefaults.Key.userName)
                     // ✅ UIAlertController 를 만드는 커스텀 메서드
-                    self.makeAlert(title: "로그인", message: "로그인 성공", okAction: { _ in
+                    self.makeAlert(title: "로그인", message: message, okAction: { _ in
                         self.presentToCheckinViewController()
                     })
                 }

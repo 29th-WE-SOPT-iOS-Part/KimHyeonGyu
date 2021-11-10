@@ -86,10 +86,10 @@ extension SignupViewController {
     func postSignupWithAPI() {
         SignupService.shared.signup(email: contactTextField.text ?? "", name: nameTextField.text ?? "", password: passwordTextField.text ?? "") { response in
             switch response {
-            case .success(let signupResponse):
-                if let data = signupResponse as? SignupResponseModel {
+            case .success(let signupResponse, let message):
+                if let data = signupResponse as? SignupResponseModel, let message = message as? String {
                     UserDefaults.standard.set(data.name, forKey: Const.UserDefaults.Key.userName)
-                    self.makeAlert(title: "회원가입", message: "회원 가입 성공", okAction: { _ in
+                    self.makeAlert(title: "회원가입", message: message, okAction: { _ in
                         self.presentToCheckinViewController()
                     })
                 }

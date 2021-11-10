@@ -56,7 +56,7 @@ struct LoginService {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(GenericResponse<LoginResponseModel>.self, from: data) else { return .pathErr}
         if valid {
-            return .success(decodedData.data)
+            return .success(decodedData.data, decodedData.message)
         } else {
             return .requestErr(decodedData.message)
         }
