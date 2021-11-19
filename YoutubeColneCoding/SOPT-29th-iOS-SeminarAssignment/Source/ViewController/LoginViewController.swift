@@ -45,14 +45,7 @@ class LoginViewController: UIViewController {
         navigationController?.pushViewController(signupVC, animated: true)
     }
     @IBAction func touchCheckinButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: Const.Storyboard.Name.checkin, bundle: nil)
-        guard let checkinVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Identifier.checkin) as? CheckinViewController else {
-            return
-        }
-        
-        checkinVC.userName = nameTextField.text
-        checkinVC.modalPresentationStyle = .fullScreen
-        present(checkinVC, animated: true, completion: nil)
+        postLoginWithAPI()
     }
 }
 
@@ -72,6 +65,47 @@ extension LoginViewController {
     private func initTextFieldEmpty() {
         textFieldList.forEach {
             $0.text = ""
+        }
+    }
+    private func presentToCheckinViewController() {
+        let storyboard = UIStoryboard(name: Const.Storyboard.Name.checkin, bundle: nil)
+        guard let checkinVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Identifier.checkin) as? CheckinViewController else {
+            return
+        }
+        
+        checkinVC.modalPresentationStyle = .fullScreen
+        present(checkinVC, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Network
+
+extension LoginViewController {
+    func postLoginWithAPI() {
+        LoginService.shared.login(email: contactTextField.text ?? "",
+                                  password: passwordTextField.text ?? "") { response in
+            switch response {
+            case .success(let loginResponse, let message):
+                if let data = loginResponse as? LoginResponseModel, let message = message as? String {
+                    // ✅ UserDefaults 로 이름을 저장
+                    UserDefaults.standard.set(data.name, forKey: Const.UserDefaults.Key.userName)
+                    // ✅ UIAlertController 를 만드는 커스텀 메서드
+                    self.makeAlert(title: "로그인", message: message, okAction: { _ in
+                        self.presentToCheckinViewController()
+                    })
+                }
+            case .requestErr(let message):
+                if let message = message as? String {
+                    self.makeAlert(title: "로그인", message: message)
+                }
+            case .pathErr:
+                print("postLoginWithAPI - pathErr")
+            case .serverErr:
+                print("postLoginWithAPI - serverErr")
+            case .networkFail:
+                print("postLoginWithAPI - networkFail")
+            }
+            
         }
     }
 }

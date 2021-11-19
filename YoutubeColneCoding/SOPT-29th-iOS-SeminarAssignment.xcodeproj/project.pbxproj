@@ -31,6 +31,15 @@
 		F8D2BE75270848FF00ED5EEA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D2BE73270848FF00ED5EEA /* Login.storyboard */; };
 		F8D2BE77270848FF00ED5EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D2BE76270848FF00ED5EEA /* Assets.xcassets */; };
 		F8D2BE7A270848FF00ED5EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D2BE78270848FF00ED5EEA /* LaunchScreen.storyboard */; };
+		F8D648152736F01500B4EF34 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D648142736F01500B4EF34 /* NetworkResult.swift */; };
+		F8D648172736F01D00B4EF34 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D648162736F01D00B4EF34 /* GenericResponse.swift */; };
+		F8D6481B2736F06800B4EF34 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D6481A2736F06800B4EF34 /* URL.swift */; };
+		F8D6481D2736F1F000B4EF34 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D6481C2736F1F000B4EF34 /* SignupService.swift */; };
+		F8D6481F2736F2AF00B4EF34 /* SignupResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D6481E2736F2AF00B4EF34 /* SignupResponseModel.swift */; };
+		F8D648242736F86900B4EF34 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D648232736F86900B4EF34 /* UIViewController+alert.swift */; };
+		F8D648262736F9B400B4EF34 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D648252736F9B400B4EF34 /* LoginService.swift */; };
+		F8D648282736FA6400B4EF34 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D648272736FA6400B4EF34 /* LoginResponseModel.swift */; };
+		F8D6482A27379D8C00B4EF34 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D6482927379D8C00B4EF34 /* UserDefaults.swift */; };
 		F8E70BEF270F4D0100A7DAF2 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8E70BEE270F4D0100A7DAF2 /* Signup.storyboard */; };
 		F8E70BF1270F4D0C00A7DAF2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E70BF0270F4D0C00A7DAF2 /* SignupViewController.swift */; };
 		F8E70BF3270F4D6B00A7DAF2 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E70BF2270F4D6B00A7DAF2 /* CheckinViewController.swift */; };
@@ -70,6 +79,15 @@
 		F8D2BE76270848FF00ED5EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8D2BE79270848FF00ED5EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8D2BE7B270848FF00ED5EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8D648142736F01500B4EF34 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		F8D648162736F01D00B4EF34 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		F8D6481A2736F06800B4EF34 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		F8D6481C2736F1F000B4EF34 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
+		F8D6481E2736F2AF00B4EF34 /* SignupResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseModel.swift; sourceTree = "<group>"; };
+		F8D648232736F86900B4EF34 /* UIViewController+alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
+		F8D648252736F9B400B4EF34 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		F8D648272736FA6400B4EF34 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		F8D6482927379D8C00B4EF34 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		F8E70BEE270F4D0100A7DAF2 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		F8E70BF0270F4D0C00A7DAF2 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		F8E70BF2270F4D6B00A7DAF2 /* CheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +124,6 @@
 				B08B034AABFE2509BE3D294D /* Pods-SOPT-29th-iOS-SeminarAssignment.debug.xcconfig */,
 				682D272BCCB16C086AFE7213 /* Pods-SOPT-29th-iOS-SeminarAssignment.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,9 +193,38 @@
 			isa = PBXGroup;
 			children = (
 				F8E70BEA270F4BF900A7DAF2 /* Resource */,
+				F8D648222736F7E200B4EF34 /* Extensions */,
 				F8E70BEB270F4C0300A7DAF2 /* Source */,
 			);
 			path = "SOPT-29th-iOS-SeminarAssignment";
+			sourceTree = "<group>";
+		};
+		F8D648182736F02000B4EF34 /* NetworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8D648162736F01D00B4EF34 /* GenericResponse.swift */,
+				F8D648142736F01500B4EF34 /* NetworkResult.swift */,
+				F8D6481E2736F2AF00B4EF34 /* SignupResponseModel.swift */,
+				F8D648272736FA6400B4EF34 /* LoginResponseModel.swift */,
+			);
+			path = NetworkModel;
+			sourceTree = "<group>";
+		};
+		F8D648192736F02D00B4EF34 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				F8D6481C2736F1F000B4EF34 /* SignupService.swift */,
+				F8D648252736F9B400B4EF34 /* LoginService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		F8D648222736F7E200B4EF34 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F8D648232736F86900B4EF34 /* UIViewController+alert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F8E70BEA270F4BF900A7DAF2 /* Resource */ = {
@@ -197,6 +243,8 @@
 			children = (
 				F8E70BFD270F503A00A7DAF2 /* AppDelegate.swift */,
 				F8D2BE6F270848FF00ED5EEA /* SceneDelegate.swift */,
+				F8D648182736F02000B4EF34 /* NetworkModel */,
+				F8D648192736F02D00B4EF34 /* NetworkService */,
 				F8786C83272B345700BAD7CE /* Model */,
 				F8786C74272B29C800BAD7CE /* Cell */,
 				F8786C6B272AE5B900BAD7CE /* View */,
@@ -235,6 +283,8 @@
 				F8E70BF9270F4E8B00A7DAF2 /* Storyboard.swift */,
 				F8E70BFB270F4EB000A7DAF2 /* ViewController.swift */,
 				F8786C7D272B2B3A00BAD7CE /* Xib.swift */,
+				F8D6481A2736F06800B4EF34 /* URL.swift */,
+				F8D6482927379D8C00B4EF34 /* UserDefaults.swift */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -364,24 +414,33 @@
 				F8E70BFE270F503A00A7DAF2 /* AppDelegate.swift in Sources */,
 				F86E5201271DE11F00D57993 /* LibraryViewController.swift in Sources */,
 				F86E5203271DE14900D57993 /* PlusViewController.swift in Sources */,
+				F8D648242736F86900B4EF34 /* UIViewController+alert.swift in Sources */,
 				F8786C85272B349B00BAD7CE /* ChannelData.swift in Sources */,
 				F8786C81272B2BA600BAD7CE /* ThumbnailTableViewCell.swift in Sources */,
+				F8D648172736F01D00B4EF34 /* GenericResponse.swift in Sources */,
+				F8D6481F2736F2AF00B4EF34 /* SignupResponseModel.swift in Sources */,
 				F8786C7B272B29E300BAD7CE /* CategoryCollectionViewCell.swift in Sources */,
 				F8D2BE72270848FF00ED5EEA /* LoginViewController.swift in Sources */,
+				F8D6481D2736F1F000B4EF34 /* SignupService.swift in Sources */,
 				F8E70BF1270F4D0C00A7DAF2 /* SignupViewController.swift in Sources */,
 				F8E70BF3270F4D6B00A7DAF2 /* CheckinViewController.swift in Sources */,
 				F86E51FD271DE06F00D57993 /* TabBarViewController.swift in Sources */,
 				F86E51FF271DE11400D57993 /* HomeViewController.swift in Sources */,
 				F8786C7E272B2B3A00BAD7CE /* Xib.swift in Sources */,
 				F8D2BE70270848FF00ED5EEA /* SceneDelegate.swift in Sources */,
+				F8D648152736F01500B4EF34 /* NetworkResult.swift in Sources */,
 				F8786C6D272AE69700BAD7CE /* CustomNavigationBar.swift in Sources */,
 				F8786C77272B29D700BAD7CE /* ChannelCollectionViewCell.swift in Sources */,
 				F8E70BFC270F4EB000A7DAF2 /* ViewController.swift in Sources */,
+				F8D648282736FA6400B4EF34 /* LoginResponseModel.swift in Sources */,
 				F86E5205271DE16100D57993 /* SubscriptionViewController.swift in Sources */,
 				F8E70BFA270F4E8B00A7DAF2 /* Storyboard.swift in Sources */,
 				F8E70BF8270F4E7E00A7DAF2 /* Const.swift in Sources */,
 				F86E5207271DE16E00D57993 /* ShortsViewController.swift in Sources */,
+				F8D6482A27379D8C00B4EF34 /* UserDefaults.swift in Sources */,
 				F8786C87272B34AA00BAD7CE /* ThumbnailData.swift in Sources */,
+				F8D6481B2736F06800B4EF34 /* URL.swift in Sources */,
+				F8D648262736F9B400B4EF34 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +603,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "hyun99999.SOPT-29th-iOS-SeminarAssignment";
+				PRODUCT_BUNDLE_IDENTIFIER = hyun99999.YoutubCloneCoding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -574,7 +633,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "hyun99999.SOPT-29th-iOS-SeminarAssignment";
+				PRODUCT_BUNDLE_IDENTIFIER = hyun99999.YoutubCloneCoding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

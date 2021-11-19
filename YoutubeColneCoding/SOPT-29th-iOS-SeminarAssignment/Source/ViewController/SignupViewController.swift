@@ -37,14 +37,7 @@ class SignupViewController: UIViewController {
     // MARK: - @IBOutlet Properties
     
     @IBAction func touchSignupButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: Const.Storyboard.Name.checkin, bundle: nil)
-        guard let checkinVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Identifier.checkin) as? CheckinViewController else {
-            return
-        }
-        
-        checkinVC.userName = nameTextField.text
-        checkinVC.modalPresentationStyle = .fullScreen
-        present(checkinVC, animated: true, completion: nil)
+        postSignupWithAPI()
     }
     @IBAction func touchPasswordTextFieldSecure(_ sender: Any) {
         if passwordTextFieldIsSecurity {
@@ -74,6 +67,44 @@ extension SignupViewController {
     private func initTextFieldEmpty() {
         textFieldList.forEach {
             $0.text = ""
+        }
+    }
+    private func presentToCheckinViewController() {
+        let storyboard = UIStoryboard(name: Const.Storyboard.Name.checkin, bundle: nil)
+        guard let checkinVC = storyboard.instantiateViewController(withIdentifier: Const.ViewController.Identifier.checkin) as? CheckinViewController else {
+            return
+        }
+
+        checkinVC.modalPresentationStyle = .fullScreen
+        present(checkinVC, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Network
+
+extension SignupViewController {
+    func postSignupWithAPI() {
+        SignupService.shared.signup(email: contactTextField.text ?? "", name: nameTextField.text ?? "", password: passwordTextField.text ?? "") { response in
+            switch response {
+            case .success(let signupResponse, let message):
+                if let data = signupResponse as? SignupResponseModel, let message = message as? String {
+                    UserDefaults.standard.set(data.name, forKey: Const.UserDefaults.Key.userName)
+                    self.makeAlert(title: "회원가입", message: message, okAction: { _ in
+                        self.presentToCheckinViewController()
+                    })
+                }
+            case .requestErr(let message):
+                if let message = message as? String {
+                    self.makeAlert(title: "회원가입", message: message)
+                }
+            case .pathErr:
+                print("postSignupWithAPI- pathErr")
+            case .serverErr:
+                print("postSignupWithAPI - serverErr")
+            case .networkFail:
+                print("postSignupWithAPI - networkFail")
+            }
+            
         }
     }
 }

@@ -17,6 +17,9 @@ class HomeViewController: UIViewController {
     
     // MARK: - @IBOutlet Properties
     
+    // ✅ CustomNavigationBar 클래스에서 File's Owner 의 Custom Class 설정했을 땣
+//    @IBOutlet weak var customNavigationBar: CustomNavigationBar!
+    
     @IBOutlet weak var customNavigationBar: UIView!
     @IBOutlet weak var channelCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
@@ -38,19 +41,28 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     private func initNavigationBar() {
         self.navigationController?.navigationBar.isHidden = true
-        // ✅ 커스텀네비게이션바 클래스에서 View 의 Custom Class 를 설정했을 떄 사용하는 코드
+        // ✅ CustomNavigationBar 클래스에서 View 의 Custom Class 를 설정했을 때 사용하는 코드
         guard let loadedNib = Bundle.main.loadNibNamed(String(describing: CustomNavigationBar.self), owner: self, options: nil) else { return }
         guard let navigationBar = loadedNib.first as? CustomNavigationBar else { return }
-        
+
         navigationBar.frame = CGRect(x: 0, y: 0, width: customNavigationBar.frame.width, height: customNavigationBar.frame.height)
         customNavigationBar.addSubview(navigationBar)
+        
+        // ✅ CustomNavigationBar 클래스에서 View 의 Custom Class 를 설정했을 때 이벤트 등록.
+//        navigationBar.profileButton.addTarget(self, action: #selector(touchProfileButton), for: .touchUpInside)
+        navigationBar.presentingViewController = self
+        
+        // ✅ CustomNavigationBar 클래스에서 File's Owner 의 Custom Class 를 설정했을 때 이벤트 등록 코드
+//        customNavigationBar.profileButton.addTarget(self, action: #selector(touchProfileButton), for: .touchUpInside)
     }
     
     private func assignDelegate() {
         channelCollectionView.delegate = self
         channelCollectionView.dataSource = self
+        
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
+        
         thumbnailTableView.delegate = self
         thumbnailTableView.dataSource = self
     }
@@ -79,10 +91,18 @@ extension HomeViewController {
                                           ThumbnailData(thumbnailImage: "wesoptiOSPart", channelImage: "wesoptProfile", title: "3차 iOS 세미나 : ScrollView, Delegate Pattern, TableView, CollectionView", subtitle: "WE SOPT ・조회수 100만회 ・ 3주 전"),
                                           ThumbnailData(thumbnailImage: "wesoptiOSPart", channelImage: "wesoptProfile", title: "4차 iOS 세미나 : Cocoapods & Networking, REST API", subtitle: "WE SOPT ・조회수 100만회 ・ 3주 전"),
                                           ThumbnailData(thumbnailImage: "wesoptiOSPart", channelImage: "wesoptProfile", title: "7차 iOS 세미나 : Animation과 제스쳐, 데이터 전달 심화 ", subtitle: "WE SOPT ・조회수 100만회 ・ 3주 전")])
-        channelCollectionView.reloadData()
-        categoryCollectionView.reloadData()
-        thumbnailTableView.reloadData()
     }
+    
+    // MARK: - @Objc Methods
+    
+    // ✅ CustomNavigationBar 의 profileButton 이벤트(현재 커스텀뷰로 이동시켜서 공통적으로 작업하도록 함)
+//    @objc
+//    private func touchProfileButton() {
+//        guard let loginVC = UIStoryboard(name: Const.Storyboard.Name.login, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.login) as? LoginViewController else { return }
+//        loginVC.modalPresentationStyle = .fullScreen
+//        loginVC.modalTransitionStyle = .crossDissolve
+//        present(loginVC, animated: true, completion: nil)
+//    }
 }
 
 // MARK: - UICollectionViewDelegate
