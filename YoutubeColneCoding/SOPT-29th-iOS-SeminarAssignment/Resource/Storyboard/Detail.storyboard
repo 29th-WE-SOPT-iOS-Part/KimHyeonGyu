@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="Y6W-OH-hqX" customClass="DetailViewController" customModule="SOPT_29th_iOS_SeminarAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3g1-bL-RWe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="234"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3g1-bL-RWe" secondAttribute="height" multiplier="375:212" id="OjF-4K-VzE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbt-La-Ujz">
+                                <rect key="frame" x="12" y="290" width="37.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRO-tW-4h7">
+                                <rect key="frame" x="12" y="312" width="33" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFL-d2-zzj">
+                                <rect key="frame" x="16" y="63" width="40" height="24"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="downIcon"/>
+                                <connections>
+                                    <action selector="touchDismissButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jKH-JK-6CU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uFL-d2-zzj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="UND-9N-mZm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3g1-bL-RWe" secondAttribute="trailing" id="Ur4-Dj-1IN"/>
+                            <constraint firstItem="wbt-La-Ujz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="Xw5-fb-M0b"/>
+                            <constraint firstItem="3g1-bL-RWe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="YmK-Oz-9LZ"/>
+                            <constraint firstItem="PRO-tW-4h7" firstAttribute="top" secondItem="wbt-La-Ujz" secondAttribute="bottom" constant="4" id="Zu0-vr-IlT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PRO-tW-4h7" secondAttribute="trailing" constant="93" id="aZz-cd-GtK"/>
+                            <constraint firstItem="3g1-bL-RWe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cZm-yI-EPB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wbt-La-Ujz" secondAttribute="trailing" constant="93" id="fTW-ou-0wy"/>
+                            <constraint firstItem="PRO-tW-4h7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="kUq-y8-XrK"/>
+                            <constraint firstItem="uFL-d2-zzj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="19" id="pjL-aa-ULs"/>
+                            <constraint firstItem="wbt-La-Ujz" firstAttribute="top" secondItem="3g1-bL-RWe" secondAttribute="bottom" constant="12" id="qfA-cg-qjs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="PRO-tW-4h7" id="abk-rp-ori"/>
+                        <outlet property="thumbnailImageView" destination="3g1-bL-RWe" id="dn5-iz-ooy"/>
+                        <outlet property="titleLabel" destination="wbt-La-Ujz" id="UCg-hy-P5g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="91" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="downIcon" width="16" height="10"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
