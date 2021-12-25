@@ -14,6 +14,7 @@ extension Const {
             static let signup = "Signup"
             static let checkin = "Checkin"
             static let tabbar = "TabBar"
+            static let detail = "Detail"
         }
     }
 }

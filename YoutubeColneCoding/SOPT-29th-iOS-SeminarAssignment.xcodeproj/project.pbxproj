@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A4385EDF39C913E434988157 /* Pods_SOPT_29th_iOS_SeminarAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B5CDF251480DB46DB232E5 /* Pods_SOPT_29th_iOS_SeminarAssignment.framework */; };
+		F8268DBB2776072D00BF114B /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8268DBA2776072D00BF114B /* Detail.storyboard */; };
+		F8268DBD2776074900BF114B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8268DBC2776074900BF114B /* DetailViewController.swift */; };
 		F86E51FB271DE05000D57993 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86E51FA271DE05000D57993 /* TabBar.storyboard */; };
 		F86E51FD271DE06F00D57993 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E51FC271DE06F00D57993 /* TabBarViewController.swift */; };
 		F86E51FF271DE11400D57993 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86E51FE271DE11400D57993 /* HomeViewController.swift */; };
@@ -54,6 +56,8 @@
 		61B5CDF251480DB46DB232E5 /* Pods_SOPT_29th_iOS_SeminarAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_29th_iOS_SeminarAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		682D272BCCB16C086AFE7213 /* Pods-SOPT-29th-iOS-SeminarAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-iOS-SeminarAssignment.release.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-iOS-SeminarAssignment/Pods-SOPT-29th-iOS-SeminarAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		B08B034AABFE2509BE3D294D /* Pods-SOPT-29th-iOS-SeminarAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-iOS-SeminarAssignment.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-iOS-SeminarAssignment/Pods-SOPT-29th-iOS-SeminarAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		F8268DBA2776072D00BF114B /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		F8268DBC2776074900BF114B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F86E51FA271DE05000D57993 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		F86E51FC271DE06F00D57993 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F86E51FE271DE11400D57993 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 				F8E70BEE270F4D0100A7DAF2 /* Signup.storyboard */,
 				F8E70BF4270F4D7300A7DAF2 /* Checkin.storyboard */,
 				F86E51FA271DE05000D57993 /* TabBar.storyboard */,
+				F8268DBA2776072D00BF114B /* Detail.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				F8D2BE71270848FF00ED5EEA /* LoginViewController.swift */,
 				F8E70BF0270F4D0C00A7DAF2 /* SignupViewController.swift */,
 				F8E70BF2270F4D6B00A7DAF2 /* CheckinViewController.swift */,
+				F8268DBC2776074900BF114B /* DetailViewController.swift */,
 				F86E5208271DE17000D57993 /* TabBar */,
 			);
 			path = ViewController;
@@ -355,6 +361,7 @@
 				F8E70BEF270F4D0100A7DAF2 /* Signup.storyboard in Resources */,
 				F86E51FB271DE05000D57993 /* TabBar.storyboard in Resources */,
 				F8786C73272AEB4100BAD7CE /* CustomNavigationBar.xib in Resources */,
+				F8268DBB2776072D00BF114B /* Detail.storyboard in Resources */,
 				F8786C7C272B29E300BAD7CE /* CategoryCollectionViewCell.xib in Resources */,
 				F8786C78272B29D700BAD7CE /* ChannelCollectionViewCell.xib in Resources */,
 				F8786C82272B2BA600BAD7CE /* ThumbnailTableViewCell.xib in Resources */,
@@ -430,6 +437,7 @@
 				F8D2BE70270848FF00ED5EEA /* SceneDelegate.swift in Sources */,
 				F8D648152736F01500B4EF34 /* NetworkResult.swift in Sources */,
 				F8786C6D272AE69700BAD7CE /* CustomNavigationBar.swift in Sources */,
+				F8268DBD2776074900BF114B /* DetailViewController.swift in Sources */,
 				F8786C77272B29D700BAD7CE /* ChannelCollectionViewCell.swift in Sources */,
 				F8E70BFC270F4EB000A7DAF2 /* ViewController.swift in Sources */,
 				F8D648282736FA6400B4EF34 /* LoginResponseModel.swift in Sources */,

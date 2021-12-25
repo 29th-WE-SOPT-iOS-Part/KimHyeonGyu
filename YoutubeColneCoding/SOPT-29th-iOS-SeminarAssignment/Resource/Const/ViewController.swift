@@ -19,6 +19,7 @@ extension Const {
             static let plus = "PlusViewController"
             static let subscription = "SubscriptionViewController"
             static let shotrs = "ShortsViewController"
+            static let detail = "DetailViewController"
         }
     }
 }

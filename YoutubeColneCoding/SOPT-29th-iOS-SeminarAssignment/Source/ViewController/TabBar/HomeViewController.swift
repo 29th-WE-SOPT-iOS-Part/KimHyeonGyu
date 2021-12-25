@@ -196,6 +196,15 @@ extension HomeViewController: UITableViewDataSource {
         }
         
         cell.setDataWith(thumbnailImage: thumbnailList[indexPath.row].thumbnailImage, channelImage: thumbnailList[indexPath.row].channelImage, titleText: thumbnailList[indexPath.row].title, subtitleText: thumbnailList[indexPath.row].subtitle)
+        cell.presentDetailViewController = {
+            guard let nextVC = UIStoryboard(name: Const.Storyboard.Name.detail, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.detail) as? DetailViewController else { return }
+            nextVC.modalPresentationStyle = .overFullScreen
+            nextVC.titleText = self.thumbnailList[indexPath.row].title
+            nextVC.subtitleText = self.thumbnailList[indexPath.row].subtitle
+            nextVC.thumbnailImage = self.thumbnailList[indexPath.row].thumbnailImage
+            
+            self.present(nextVC, animated: true, completion: nil)
+        }
         return cell
     }
     

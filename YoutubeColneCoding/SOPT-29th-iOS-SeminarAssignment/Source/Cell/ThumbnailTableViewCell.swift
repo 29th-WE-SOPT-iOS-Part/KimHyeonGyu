@@ -9,6 +9,10 @@ import UIKit
 
 class ThumbnailTableViewCell: UITableViewCell {
     
+    // MARK: - Properties
+    
+    var presentDetailViewController: (() -> Void)?
+    
     // MARK: - @IBOutlet Properties
     
     @IBOutlet weak var thumbnailImageView: UIImageView!
@@ -20,6 +24,8 @@ class ThumbnailTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        setTabGesture()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,6 +35,16 @@ class ThumbnailTableViewCell: UITableViewCell {
     }
     
     // MARK: - Methods
+    func setTabGesture() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(touchImageView))
+        thumbnailImageView.addGestureRecognizer(tapGestureRecognizer)
+        thumbnailImageView.isUserInteractionEnabled = true
+    }
+    
+    @objc
+    private func touchImageView() {
+        presentDetailViewController?()
+    }
     
     func setDataWith(thumbnailImage: String,
                              channelImage: String,
